@@ -1,14 +1,167 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+body, html {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  background: #161616;
+  color: #fff;
+}
+.main__container {
+  position: relative;
+}
+input#file {
+  display: none;
+}
+header {
+  text-align: center;
+}
+section.container {
+  display: flex;
+  position: relative;
+}
+section.container.main {
+  height: 100vh;
+}
+section > .section_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20vw;
+}
+section > .section_wrap > .controll_wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 30px;
+}
+section .image_source {
+  display: block;
+  width: 80vw;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.image_source > img, canvas, #result {
+    max-height: 70vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    max-width: calc(100% - 60px);
+}
+section .section_wrap.controlls input#brightness,
+section .section_wrap.controlls input#contrast,
+section .section_wrap.controlls input#opacity {
+  direction: rtl;
+}
+img.placeholder {
+  opacity: 0.3;
+  width: 180px;
+}
+.onDragOver {
+  opacity: 0.5;
+  width: 210px;
+}
+img.userImageUploaded {
+  max-width: 90%;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 20px;
+  color: #7d7d7d;
+}
+a {
+  cursor: pointer;
+}
+.saveBtn {
+  padding: 10px;
+  margin: 0 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #88B04B;
+  color: white;
+  display: inline-block;
+}
+.deleteBtn {
+  padding: 10px;
+  margin: 0 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #FA7268;
+  color: white;
+}
+.cancelBtn {
+  padding: 10px;
+  margin: 0 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #EFC050;
+  color: white;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+button {
+  cursor: pointer;
+}
+button:hover, button:active, button:focus, button:visited {
+  outline: none;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+h3.help__text {
+  position: absolute;
+  top: calc(50% + 136px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-family: 'Bad Script', cursive;
+  font-size: 3em;
+  font-weight: 100;
+  font-style: italic;
+  color: #a2a2a2;
+}
+@media screen and (max-width: 1000px) {
+  section.controls_dragzone {
+    flex-direction: column;
+  }
+  section .section_wrap {
+    width: calc(100% - 60px);
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  section .image_source {
+    width: 100vw;
+    height: 80vh;
+  }
+  section .controlls {
+    width: 100vw;
+  }
+  section.container.main {
+    height: 100%;
+  }
+  footer {
+    position: absolute;
+    bottom: -90px;
+    padding: 20px;
+    color: #7d7d7d;
+  }
+}
+@media screen and (max-width: 768px) {
+  section > .section_wrap > .controll_wrap {
+    padding: 15px 20px;
+  }
 }
