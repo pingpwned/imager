@@ -21,7 +21,7 @@ export default class App extends Component {
           <Dragzone upload={this._onChange} imgLoaded={this.state.imgLoaded}/>
           <Controlls ref={instance => { this.child = instance; }} parentMethod={this.loadPlaceholderImage} clearState={this.clearState} />
         </section>
-        <footer>Made by DS</footer>
+        <footer>Made by <a href="//pingpwned.xyz">pingpwned.xyz</a></footer>
       </div>
     );
   }

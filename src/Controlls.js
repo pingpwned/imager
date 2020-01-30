@@ -75,7 +75,7 @@ export default class Controlls extends Component {
           </div>
           
           <div className="buttons">
-                <a id="saveBtn" className="saveBtn" onClick={this.clickBtnSave} ref="saveBtn" download="mandimanImageEditor-">
+                <a id="saveBtn" className="saveBtn" onClick={this.clickBtnSave} ref="saveBtn" download="imager-">
                   <img src={DownloadIcon} className="donwloadIcon icon" />
                 </a>
                 <button className="deleteBtn" onClick={this.clickBtnDel} >
