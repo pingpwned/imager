@@ -1,4 +1,4 @@
-Check free [demo](https://imager.pingpwned.xyz)
+Check free [demo](https://imager.nblx.me/)
 
 ## Available Scripts
 
